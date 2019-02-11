@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+  <!--<environmentMode>FULL_ASSERT</environmentMode>--><!-- To slowly prove there are no bugs in this code -->
+  <!--<moveThreadCount>AUTO</moveThreadCount>--><!-- To solve faster by saturating multiple CPU cores -->
+
+  <solutionClass>com.redhat.summit2019.optaplanner.domain.TravelingMechanicSolution</solutionClass>
+  <entityClass>com.redhat.summit2019.optaplanner.domain.Visit</entityClass>
+
+  <scoreDirectorFactory>
+    <scoreDrl>com/redhat/summit2019/optaplanner/solver/travelingMechanicScoreRules.drl</scoreDrl>
+    <initializingScoreTrend>ONLY_DOWN</initializingScoreTrend>
+  </scoreDirectorFactory>
+
+</solver>
