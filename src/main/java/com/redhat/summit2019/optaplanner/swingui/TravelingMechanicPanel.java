@@ -16,14 +16,60 @@
 
 package com.redhat.summit2019.optaplanner.swingui;
 
+import java.awt.BorderLayout;
+import java.awt.Desktop;
+import java.awt.FlowLayout;
+import java.io.File;
+import java.io.IOException;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import com.redhat.summit2019.optaplanner.domain.MachineComponent;
 import com.redhat.summit2019.optaplanner.domain.TravelingMechanicSolution;
 import org.optaplanner.examples.common.swingui.SolutionPanel;
+import org.optaplanner.persistence.common.api.domain.solution.SolutionFileIO;
 
 public class TravelingMechanicPanel extends SolutionPanel<TravelingMechanicSolution> {
 
-    @Override
-    public void resetPanel(TravelingMechanicSolution solution) {
-        // TODO generated
+    private TravelingMechanicWorldPanel travelingMechanicWorldPanel;
+
+    public TravelingMechanicPanel() {
+        setLayout(new BorderLayout());
+        JPanel buttonPanel = new JPanel(new FlowLayout());
+        JButton button = new JButton("Dummy button");
+        buttonPanel.add(button);
+        add(buttonPanel, BorderLayout.NORTH);
+        travelingMechanicWorldPanel = new TravelingMechanicWorldPanel(this);
+        add(travelingMechanicWorldPanel, BorderLayout.CENTER);
     }
 
+    @Override
+    public boolean isWrapInScrollPane() {
+        return false;
+    }
+
+    @Override
+    public void resetPanel(TravelingMechanicSolution solution) {
+        travelingMechanicWorldPanel.resetPanel(solution);
+    }
+
+    @Override
+    public void updatePanel(TravelingMechanicSolution solution) {
+        travelingMechanicWorldPanel.updatePanel(solution);
+    }
+
+    public void hurtMachineComponent(MachineComponent machineComponent) {
+        doProblemFactChange(scoreDirector -> {
+            MachineComponent workingMachineComponent = scoreDirector.lookUpWorkingObject(machineComponent);
+            double attrition = workingMachineComponent.getAttrition();
+            attrition += (0.1 + Math.random() * 0.2); // Loose between 10% and 30%
+            if (attrition > 1.0) {
+                attrition = 1.0;
+            }
+            scoreDirector.beforeProblemPropertyChanged(workingMachineComponent);
+            workingMachineComponent.setAttrition(attrition);
+            scoreDirector.afterProblemPropertyChanged(workingMachineComponent);
+        });
+    }
 }
