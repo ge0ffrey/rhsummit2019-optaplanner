@@ -70,7 +70,7 @@ public class TravelingMechanicGenerator extends LoggingMain {
         solution.setMachineComponentList(machineComponentList);
 
         List<Mechanic> mechanicList = new ArrayList<>(1);
-        mechanicList.add(new Mechanic(0L, xSize / 2.0, ySize / 2.0));
+        mechanicList.add(new Mechanic(0L, machineComponentList.get(0)));
         solution.setMechanicList(mechanicList);
 
         List<Visit> visitList = new ArrayList<>(machineComponentList.size());

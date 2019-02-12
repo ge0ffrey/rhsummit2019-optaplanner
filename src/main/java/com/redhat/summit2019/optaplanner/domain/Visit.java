@@ -16,13 +16,18 @@
 
 package com.redhat.summit2019.optaplanner.domain;
 
+import com.redhat.summit2019.optaplanner.domain.solver.DepartureTimeUpdatingVariableListener;
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.lookup.PlanningId;
+import org.optaplanner.core.api.domain.variable.CustomShadowVariable;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
 import org.optaplanner.core.api.domain.variable.PlanningVariableGraphType;
+import org.optaplanner.core.api.domain.variable.PlanningVariableReference;
 
 @PlanningEntity
 public class Visit extends VisitOrMechanic {
+
+    public static final long SERVICE_TIME_MILLIS = 500L;
 
     @PlanningId
     private Long id;
@@ -32,12 +37,27 @@ public class Visit extends VisitOrMechanic {
             graphType = PlanningVariableGraphType.CHAINED)
     private VisitOrMechanic previous;
 
+    @CustomShadowVariable(variableListenerClass = DepartureTimeUpdatingVariableListener.class,
+            sources = {@PlanningVariableReference(variableName = "previous")})
+    private Long departureTimeMillis = null; // Always after Mechanic.readyTimeMillis
+
     private Visit() {
     }
 
     public Visit(Long id, MachineComponent machineComponent) {
         this.id = id;
         this.machineComponent = machineComponent;
+    }
+
+    public Long getTravelTimeMillisFromPrevious() {
+        if (previous == null) {
+            return null;
+        }
+        return previous.getMachineComponent().getTravelTimeMillisTo(machineComponent);
+    }
+
+    public long getAttritionMicros() {
+        return (long) (machineComponent.getAttrition() * 1_000_000.0);
     }
 
     @Override
@@ -53,6 +73,7 @@ public class Visit extends VisitOrMechanic {
         return id;
     }
 
+    @Override
     public MachineComponent getMachineComponent() {
         return machineComponent;
     }
@@ -63,6 +84,15 @@ public class Visit extends VisitOrMechanic {
 
     public void setPrevious(VisitOrMechanic previous) {
         this.previous = previous;
+    }
+
+    @Override
+    public Long getDepartureTimeMillis() {
+        return departureTimeMillis;
+    }
+
+    public void setDepartureTimeMillis(Long departureTimeMillis) {
+        this.departureTimeMillis = departureTimeMillis;
     }
 
 }

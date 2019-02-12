@@ -28,10 +28,22 @@ global HardSoftLongScoreHolder scoreHolder;
 // Hard constraints
 // ############################################################################
 
-
+rule "Attrition"
+    when
+        $visit : Visit(previous != null, $timeMillis : departureTimeMillis, $attritionMicros : attritionMicros)
+    then
+        scoreHolder.addHardConstraintMatch(kcontext, - $timeMillis * $attritionMicros);
+end
 
 // ############################################################################
 // Soft constraints
 // ############################################################################
+
+rule "TravelTimeMillis"
+    when
+        $visit : Visit(previous != null, $timeMillis : departureTimeMillis)
+    then
+        scoreHolder.addSoftConstraintMatch(kcontext, - $timeMillis);
+end
 
 

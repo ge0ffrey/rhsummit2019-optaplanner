@@ -20,6 +20,8 @@ import org.optaplanner.core.api.domain.lookup.PlanningId;
 
 public class MachineComponent {
 
+    public static final double SPEED_IN_XY_PER_MILLIS = 0.1;
+
     @PlanningId
     private Long id;
 
@@ -32,6 +34,15 @@ public class MachineComponent {
         this.id = id;
         this.locationX = locationX;
         this.locationY = locationY;
+    }
+
+    public long getTravelTimeMillisTo(MachineComponent machineComponent) {
+        // Euclidean distance (Pythagorean theorem)
+        double xDifference = machineComponent.locationX - locationX;
+        double yDifference = machineComponent.locationY - locationY;
+        double distance = Math.sqrt((xDifference * xDifference) + (yDifference * yDifference));
+        // Floored to long in millis (3 digits) to avoid score corruption
+        return (long) (distance / SPEED_IN_XY_PER_MILLIS);
     }
 
     @Override

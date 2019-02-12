@@ -34,4 +34,8 @@ public abstract class VisitOrMechanic {
         this.next = next;
     }
 
+    public abstract MachineComponent getMachineComponent();
+
+    public abstract Long getDepartureTimeMillis();
+
 }

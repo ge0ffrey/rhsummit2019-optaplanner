@@ -25,28 +25,20 @@ import java.awt.event.ComponentEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
-import java.time.format.DateTimeFormatter;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Locale;
-import java.util.Optional;
-import java.util.Set;
 import javax.swing.JPanel;
 
 import com.redhat.summit2019.optaplanner.domain.MachineComponent;
 import com.redhat.summit2019.optaplanner.domain.Mechanic;
 import com.redhat.summit2019.optaplanner.domain.TravelingMechanicSolution;
-import org.apache.commons.lang3.StringUtils;
+import com.redhat.summit2019.optaplanner.domain.Visit;
 import org.optaplanner.examples.common.swingui.latitudelongitude.LatitudeLongitudeTranslator;
-import org.optaplanner.examples.rocktour.domain.RockBus;
-import org.optaplanner.examples.rocktour.domain.RockLocation;
-import org.optaplanner.examples.rocktour.domain.RockShow;
-import org.optaplanner.examples.rocktour.domain.RockTourSolution;
+import org.optaplanner.examples.tsp.domain.location.AirLocation;
 import org.optaplanner.swing.impl.TangoColorFactory;
 
 public class TravelingMechanicWorldPanel extends JPanel {
 
-    private static final int TEXT_SIZE = 10;
+    private static final int ATTRITION_TEXT_SIZE = 10;
+    private static final int DEPARTURE_TEXT_SIZE = 8;
 
     private final TravelingMechanicPanel travelingMechanicPanel;
 
@@ -95,7 +87,7 @@ public class TravelingMechanicWorldPanel extends JPanel {
         translator.prepareFor(width, height);
 
         Graphics2D g = createCanvas(width, height);
-        g.setFont(g.getFont().deriveFont((float) TEXT_SIZE));
+        g.setFont(g.getFont().deriveFont((float) ATTRITION_TEXT_SIZE));
         for (MachineComponent machineComponent : solution.getMachineComponentList()) {
             int x = translator.translateLongitudeToX(machineComponent.getLocationX());
             int y = translator.translateLatitudeToY(machineComponent.getLocationY());
@@ -107,9 +99,34 @@ public class TravelingMechanicWorldPanel extends JPanel {
                 color = TangoColorFactory.buildPercentageColor(TangoColorFactory.BUTTER_1, TangoColorFactory.SCARLET_1, (attrition - 0.5) * 2.0);
             }
             g.setColor(color);
-            g.fillRect(x - 5, y - 2, 11, 5);
+            g.fillRect(x + 2, y - 2, 11, 5);
             String percentage = (int) ((1.0 - attrition) * 100.0) + "%";
-            g.drawString(percentage, x - TEXT_SIZE, y - (TEXT_SIZE / 2));
+            g.drawString(percentage, x + 2, y - 5);
+        }
+        g.setColor(TangoColorFactory.CHOCOLATE_1);
+        g.setFont(g.getFont().deriveFont((float) DEPARTURE_TEXT_SIZE));
+        for (Visit visit : solution.getVisitList()) {
+            if (visit.getPrevious() != null) {
+                MachineComponent previousMachineComponent = visit.getPrevious().getMachineComponent();
+                MachineComponent machineComponent = visit.getMachineComponent();
+                translator.drawRoute(g, previousMachineComponent.getLocationX(), previousMachineComponent.getLocationY(),
+                        machineComponent.getLocationX(), machineComponent.getLocationY(),
+                        true, false);
+                int x = translator.translateLongitudeToX(machineComponent.getLocationX());
+                int y = translator.translateLatitudeToY(machineComponent.getLocationY());
+                g.drawString(visit.getDepartureTimeMillis() + "ms", x + 2, y + 5 + DEPARTURE_TEXT_SIZE);
+            }
+        }
+        g.setColor(TangoColorFactory.SKY_BLUE_1);
+        for (Mechanic mechanic : solution.getMechanicList()) {
+            MachineComponent machineComponent = mechanic.getMachineComponent();
+            int x = translator.translateLongitudeToX(machineComponent.getLocationX());
+            int y = translator.translateLatitudeToY(machineComponent.getLocationY());
+            g.drawLine(x - 5, y - 4, x - 5, y + 4);
+            g.drawLine(x - 7, y, x - 3, y);
+            g.drawLine(x - 7, y + 6, x - 5, y + 4);
+            g.drawLine(x - 3, y + 6, x - 5, y + 4);
+            g.drawOval(x - 7, y - 8, 4, 4);
         }
         repaint();
     }

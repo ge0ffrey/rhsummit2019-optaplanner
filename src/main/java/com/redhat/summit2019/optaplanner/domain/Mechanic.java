@@ -24,16 +24,27 @@ public class Mechanic extends VisitOrMechanic {
     @PlanningId
     private Long id;
 
-    private double locationX;
-    private double locationY;
+    // The machine component that the mechanic is currently working on, on-route to or has just finished working on
+    private MachineComponent currentMachineComponent;
+    // When the Mechanic will finish with working on currentMachineComponent
+    private Long readyTimeMillis = 0L;
 
     private Mechanic() {
     }
 
-    public Mechanic(Long id, double locationX, double locationY) {
+    public Mechanic(Long id, MachineComponent currentMachineComponent) {
         this.id = id;
-        this.locationX = locationX;
-        this.locationY = locationY;
+        this.currentMachineComponent = currentMachineComponent;
+    }
+
+    @Override
+    public MachineComponent getMachineComponent() {
+        return currentMachineComponent;
+    }
+
+    @Override
+    public Long getDepartureTimeMillis() {
+        return readyTimeMillis;
     }
 
     @Override
@@ -49,12 +60,19 @@ public class Mechanic extends VisitOrMechanic {
         return id;
     }
 
-    public double getLocationX() {
-        return locationX;
+    public MachineComponent getCurrentMachineComponent() {
+        return currentMachineComponent;
     }
 
-    public double getLocationY() {
-        return locationY;
+    public void setCurrentMachineComponent(MachineComponent currentMachineComponent) {
+        this.currentMachineComponent = currentMachineComponent;
     }
 
+    public Long getReadyTimeMillis() {
+        return readyTimeMillis;
+    }
+
+    public void setReadyTimeMillis(Long readyTimeMillis) {
+        this.readyTimeMillis = readyTimeMillis;
+    }
 }
