@@ -22,7 +22,7 @@ import org.optaplanner.core.api.domain.variable.PlanningVariable;
 import org.optaplanner.core.api.domain.variable.PlanningVariableGraphType;
 
 @PlanningEntity
-public class Visit implements VisitOrMechanic {
+public class Visit extends VisitOrMechanic {
 
     @PlanningId
     private Long id;
@@ -51,6 +51,10 @@ public class Visit implements VisitOrMechanic {
 
     public Long getId() {
         return id;
+    }
+
+    public MachineComponent getMachineComponent() {
+        return machineComponent;
     }
 
     public VisitOrMechanic getPrevious() {

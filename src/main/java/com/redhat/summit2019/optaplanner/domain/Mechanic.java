@@ -17,14 +17,18 @@
 package com.redhat.summit2019.optaplanner.domain;
 
 import org.optaplanner.core.api.domain.lookup.PlanningId;
+import org.optaplanner.examples.vehiclerouting.domain.Customer;
 
-public class Mechanic implements VisitOrMechanic {
+public class Mechanic extends VisitOrMechanic {
 
     @PlanningId
     private Long id;
 
     private double locationX;
     private double locationY;
+
+    private Mechanic() {
+    }
 
     public Mechanic(Long id, double locationX, double locationY) {
         this.id = id;

@@ -16,7 +16,22 @@
 
 package com.redhat.summit2019.optaplanner.domain;
 
+import org.optaplanner.core.api.domain.entity.PlanningEntity;
+import org.optaplanner.core.api.domain.variable.InverseRelationShadowVariable;
+
 // The joy of working with a chained variable until OptaPlanner simplifies this. See https://issues.jboss.org/browse/PLANNER-728
-public interface VisitOrMechanic {
+@PlanningEntity
+public abstract class VisitOrMechanic {
+
+    @InverseRelationShadowVariable(sourceVariableName = "previous")
+    private Visit next;
+
+    public Visit getNext() {
+        return next;
+    }
+
+    public void setNext(Visit next) {
+        this.next = next;
+    }
 
 }

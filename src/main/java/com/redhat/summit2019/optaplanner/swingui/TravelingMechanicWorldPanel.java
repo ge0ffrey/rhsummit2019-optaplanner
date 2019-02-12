@@ -78,7 +78,7 @@ public class TravelingMechanicWorldPanel extends JPanel {
                         // Slow code, do not copy
                         .filter(element -> element.getLocationX() == locationX && element.getLocationY() == locationY)
                         .findFirst()
-                        .ifPresent(machineComponent -> travelingMechanicPanel.hurtMachineComponent(machineComponent));
+                        .ifPresent(travelingMechanicPanel::hurtMachineComponent);
             }
         });
     }
