@@ -20,7 +20,6 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -48,11 +47,12 @@ public class TravelingMechanicPanel extends SolutionPanel<TravelingMechanicSolut
     private JSpinner attritionPerMilliSecondField;
     private AbstractAction simulateAction;
     private Timer timer;
-    private Random random = new Random(37);
+    private Random swingThreadRandom = new Random(37);
+    private Random solverThreadRandom = new Random(37);
 
-    private int playerSize = -1;
-    private List<MachineComponent> shuffledMachineComponentList = null;
-    private double attritionPerRefresh = Double.NaN;
+    private volatile int playerSize = -1;
+    private volatile List<MachineComponent> shuffledMachineComponentList = null;
+    private volatile double attritionPerRefresh = Double.NaN;
 
     public TravelingMechanicPanel() {
         setLayout(new BorderLayout());
@@ -107,12 +107,13 @@ public class TravelingMechanicPanel extends SolutionPanel<TravelingMechanicSolut
 
     private void refreshSimulation() {
         doProblemFactChange(scoreDirector -> {
+            List<MachineComponent> machineComponentList = this.shuffledMachineComponentList;
             // Only the first sublist of the shuffledMachineComponentList suffer attrition, once per player
             for (int player = 0; player < playerSize; player++) {
-                MachineComponent machineComponent = shuffledMachineComponentList.get(player);
+                MachineComponent machineComponent = machineComponentList.get(player);
                 machineComponent = scoreDirector.lookUpWorkingObject(machineComponent);
                 double attrition = machineComponent.getAttrition();
-                attrition += (0.5 + random.nextDouble()) * attritionPerRefresh;
+                attrition += (0.5 + solverThreadRandom.nextDouble()) * attritionPerRefresh;
                 if (attrition > 1.0) {
                     attrition = 1.0;
                 }
@@ -121,7 +122,15 @@ public class TravelingMechanicPanel extends SolutionPanel<TravelingMechanicSolut
                 scoreDirector.afterProblemPropertyChanged(machineComponent);
             }
         });
-
+        // Randomly once every second, switch attrition to another machineComponent
+        if (swingThreadRandom.nextDouble() < (1.0 / REFRESH_RATE_MILLIS)) {
+            int switchCount = 1;
+            // Use separate variable newList to avoid race conditions
+            List<MachineComponent> newList = new ArrayList<>(
+                    shuffledMachineComponentList.subList(switchCount, shuffledMachineComponentList.size()));
+            newList.addAll(shuffledMachineComponentList.subList(0, switchCount));
+            shuffledMachineComponentList = newList;
+        }
     }
 
     @Override
