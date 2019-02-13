@@ -16,10 +16,12 @@
 
 package com.redhat.summit2019.optaplanner.swingui;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Stroke;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.MouseAdapter;
@@ -36,6 +38,12 @@ import org.optaplanner.examples.tsp.domain.location.AirLocation;
 import org.optaplanner.swing.impl.TangoColorFactory;
 
 public class TravelingMechanicWorldPanel extends JPanel {
+
+    public static final Stroke FAT_DASHED_STROKE = new BasicStroke(
+            1.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 1.0f, new float[] {7.0f, 3.0f}, 0.0f);
+    public static final Stroke NORMAL_STROKE = new BasicStroke(1.0f);
+    public static final Stroke FAT_STROKE = new BasicStroke(2.0f);
+    public static final Stroke VERY_FAT_STROKE = new BasicStroke(3.0f);
 
     private static final int ATTRITION_TEXT_SIZE = 10;
     private static final int DEPARTURE_TEXT_SIZE = 8;
@@ -105,13 +113,16 @@ public class TravelingMechanicWorldPanel extends JPanel {
         }
         g.setColor(TangoColorFactory.CHOCOLATE_1);
         g.setFont(g.getFont().deriveFont((float) DEPARTURE_TEXT_SIZE));
+        Color chocolate0 = new Color(255, 207, 132);
         for (Visit visit : solution.getVisitList()) {
             if (visit.getPrevious() != null) {
                 MachineComponent previousMachineComponent = visit.getPrevious().getMachineComponent();
                 MachineComponent machineComponent = visit.getMachineComponent();
+                double attrition = visit.getMachineComponent().getAttrition();
+                g.setColor(TangoColorFactory.buildPercentageColor(chocolate0, TangoColorFactory.CHOCOLATE_3, attrition));
+                g.setStroke(attrition < 0.25 ? FAT_DASHED_STROKE : attrition < 0.50 ? NORMAL_STROKE : attrition < 0.75 ? FAT_STROKE : VERY_FAT_STROKE);
                 translator.drawRoute(g, previousMachineComponent.getLocationX(), previousMachineComponent.getLocationY(),
-                        machineComponent.getLocationX(), machineComponent.getLocationY(),
-                        true, false);
+                        machineComponent.getLocationX(), machineComponent.getLocationY(), true, false);
                 int x = translator.translateLongitudeToX(machineComponent.getLocationX());
                 int y = translator.translateLatitudeToY(machineComponent.getLocationY());
                 g.drawString(visit.getDepartureTimeMillis() + "ms", x + 2, y + 5 + DEPARTURE_TEXT_SIZE);

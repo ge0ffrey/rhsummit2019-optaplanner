@@ -17,31 +17,111 @@
 package com.redhat.summit2019.optaplanner.swingui;
 
 import java.awt.BorderLayout;
-import java.awt.Desktop;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.io.File;
-import java.io.IOException;
-import javax.swing.JButton;
+import java.awt.event.ActionEvent;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import javax.swing.AbstractAction;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.JToggleButton;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.Timer;
 
 import com.redhat.summit2019.optaplanner.domain.MachineComponent;
 import com.redhat.summit2019.optaplanner.domain.TravelingMechanicSolution;
 import org.optaplanner.examples.common.swingui.SolutionPanel;
-import org.optaplanner.persistence.common.api.domain.solution.SolutionFileIO;
 
 public class TravelingMechanicPanel extends SolutionPanel<TravelingMechanicSolution> {
 
+    public static final int REFRESH_RATE_MILLIS = 40;
+
     private TravelingMechanicWorldPanel travelingMechanicWorldPanel;
+
+    private JSpinner playerSizeField;
+    private JSpinner attritionPerMilliSecondField;
+    private AbstractAction simulateAction;
+    private Timer timer;
+    private Random random = new Random(37);
+
+    private int playerSize = -1;
+    private List<MachineComponent> shuffledMachineComponentList = null;
+    private double attritionPerRefresh = Double.NaN;
 
     public TravelingMechanicPanel() {
         setLayout(new BorderLayout());
         JPanel buttonPanel = new JPanel(new FlowLayout());
-        JButton button = new JButton("Dummy button");
-        buttonPanel.add(button);
+        buttonPanel.add(new JLabel("Player size:"));
+        playerSizeField = new JSpinner(new SpinnerNumberModel(20, 0, 5000, 10));
+        buttonPanel.add(playerSizeField);
+        buttonPanel.add(new JLabel("Avg attrition per ms per player:"));
+        attritionPerMilliSecondField = new JSpinner(new SpinnerNumberModel(0.0, 0.0, 1.0, 0.000_05));
+        ((JSpinner.NumberEditor) attritionPerMilliSecondField.getEditor()).getFormat().setMinimumFractionDigits(6); // Hack
+        attritionPerMilliSecondField.setPreferredSize(
+                new Dimension(100, attritionPerMilliSecondField.getPreferredSize().height)); // Hack
+        buttonPanel.add(attritionPerMilliSecondField);
+
+        timer = new Timer(REFRESH_RATE_MILLIS, e -> refreshSimulation());
+        simulateAction = new AbstractAction("Simulate") {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (!timer.isRunning()) {
+                    TravelingMechanicSolution solution = getSolution();
+                    if (solution == null) {
+                        return;
+                    }
+                    playerSizeField.setEnabled(false);
+                    attritionPerMilliSecondField.setEnabled(false);
+                    playerSize = (Integer) playerSizeField.getValue();
+                    double attritionPerMilliSecond = (Double) attritionPerMilliSecondField.getValue();
+                    attritionPerRefresh = attritionPerMilliSecond * REFRESH_RATE_MILLIS;
+                    shuffledMachineComponentList = new ArrayList<>(solution.getMachineComponentList());
+                    Collections.shuffle(shuffledMachineComponentList);
+                    if (playerSize > shuffledMachineComponentList.size()) {
+                        JOptionPane.showMessageDialog(TravelingMechanicPanel.this, "The playerSize (" + playerSize
+                                + ") has been reduced to machineComponentSize (" + shuffledMachineComponentList.size() + ").");
+                        playerSize = shuffledMachineComponentList.size();
+                    }
+                    timer.start();
+                } else {
+                    playerSizeField.setEnabled(true);
+                    attritionPerMilliSecondField.setEnabled(true);
+                    playerSize = -1;
+                    attritionPerRefresh = Double.NaN;
+                    shuffledMachineComponentList = null;
+                    timer.stop();
+                }
+            }
+        };
+        buttonPanel.add(new JToggleButton(simulateAction));
         add(buttonPanel, BorderLayout.NORTH);
         travelingMechanicWorldPanel = new TravelingMechanicWorldPanel(this);
         add(travelingMechanicWorldPanel, BorderLayout.CENTER);
+    }
+
+    private void refreshSimulation() {
+        doProblemFactChange(scoreDirector -> {
+            // Only the first sublist of the shuffledMachineComponentList suffer attrition, once per player
+            for (int player = 0; player < playerSize; player++) {
+                MachineComponent machineComponent = shuffledMachineComponentList.get(player);
+                machineComponent = scoreDirector.lookUpWorkingObject(machineComponent);
+                double attrition = machineComponent.getAttrition();
+                attrition += (0.5 + random.nextDouble()) * attritionPerRefresh;
+                if (attrition > 1.0) {
+                    attrition = 1.0;
+                }
+                scoreDirector.beforeProblemPropertyChanged(machineComponent);
+                machineComponent.setAttrition(attrition);
+                scoreDirector.afterProblemPropertyChanged(machineComponent);
+            }
+        });
+
     }
 
     @Override
