@@ -34,10 +34,11 @@ public class TravelingMechanicGenerator extends LoggingMain {
 
     public static void main(String[] args) {
         TravelingMechanicGenerator generator = new TravelingMechanicGenerator();
-        generator.writeTravelingMechanicSolution(5, 5);
-        generator.writeTravelingMechanicSolution(10, 10);
-        generator.writeTravelingMechanicSolution(50, 20);
-        generator.writeTravelingMechanicSolution(100, 50);
+        generator.writeTravelingMechanicSolution(5, 5, 1);
+        generator.writeTravelingMechanicSolution(10, 10, 1);
+        generator.writeTravelingMechanicSolution(10, 10, 5);
+        generator.writeTravelingMechanicSolution(50, 20, 5);
+        generator.writeTravelingMechanicSolution(100, 50, 10);
     }
 
     protected final SolutionFileIO<TravelingMechanicSolution> solutionFileIO;
@@ -48,17 +49,18 @@ public class TravelingMechanicGenerator extends LoggingMain {
         outputDir = new File(CommonApp.determineDataDir(TravelingMechanicApp.DATA_DIR_NAME), "unsolved");
     }
 
-    private void writeTravelingMechanicSolution(int xSize, int ySize) {
-        String fileName = xSize + "width-" + ySize + "height";
+    private void writeTravelingMechanicSolution(int xSize, int ySize, int mechanicSize) {
+        String fileName = xSize + "width-" + ySize + "height-" + mechanicSize + "mechanics";
         File outputFile = new File(outputDir, fileName + "." + solutionFileIO.getOutputFileExtension());
-        TravelingMechanicSolution solution = createSolution(xSize, ySize);
+        TravelingMechanicSolution solution = createSolution(xSize, ySize, mechanicSize);
         solutionFileIO.write(solution, outputFile);
     }
 
-    private TravelingMechanicSolution createSolution(int xSize, int ySize) {
+    private TravelingMechanicSolution createSolution(int xSize, int ySize, int mechanicSize) {
         TravelingMechanicSolution solution = new TravelingMechanicSolution();
 
-        List<MachineComponent> machineComponentList = new ArrayList<>(xSize * ySize);
+        int machineComponentSize = xSize * ySize;
+        List<MachineComponent> machineComponentList = new ArrayList<>(machineComponentSize);
         long machineComponentId = 0L;
         for (int x = 0; x < xSize; x++) {
             for (int y = 0; y < ySize; y++) {
@@ -69,8 +71,14 @@ public class TravelingMechanicGenerator extends LoggingMain {
         }
         solution.setMachineComponentList(machineComponentList);
 
-        List<Mechanic> mechanicList = new ArrayList<>(1);
-        mechanicList.add(new Mechanic(0L, machineComponentList.get(0)));
+        List<Mechanic> mechanicList = new ArrayList<>(mechanicSize);
+        long mechanicId = 0L;
+        for (int i = 0; i < mechanicSize; i++) {
+            MachineComponent startMachineComponent = machineComponentList.get(i * machineComponentSize / mechanicSize);
+            Mechanic mechanic = new Mechanic(mechanicId, startMachineComponent);
+            mechanicId++;
+            mechanicList.add(mechanic);
+        }
         solution.setMechanicList(mechanicList);
 
         List<Visit> visitList = new ArrayList<>(machineComponentList.size());

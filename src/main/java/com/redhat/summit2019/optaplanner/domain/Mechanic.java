@@ -17,7 +17,6 @@
 package com.redhat.summit2019.optaplanner.domain;
 
 import org.optaplanner.core.api.domain.lookup.PlanningId;
-import org.optaplanner.examples.vehiclerouting.domain.Customer;
 
 public class Mechanic extends VisitOrMechanic {
 
@@ -25,26 +24,26 @@ public class Mechanic extends VisitOrMechanic {
     private Long id;
 
     // The machine component that the mechanic is currently working on, on-route to or has just finished working on
-    private MachineComponent currentMachineComponent;
-    // When the Mechanic will finish with working on currentMachineComponent
-    private Long readyTimeMillis = 0L;
+    private MachineComponent startMachineComponent;
+    // When the Mechanic will finish with working on startMachineComponent
+    private Long startTimeMillis = 0L;
 
     private Mechanic() {
     }
 
-    public Mechanic(Long id, MachineComponent currentMachineComponent) {
+    public Mechanic(Long id, MachineComponent startMachineComponent) {
         this.id = id;
-        this.currentMachineComponent = currentMachineComponent;
+        this.startMachineComponent = startMachineComponent;
     }
 
     @Override
     public MachineComponent getMachineComponent() {
-        return currentMachineComponent;
+        return startMachineComponent;
     }
 
     @Override
     public Long getDepartureTimeMillis() {
-        return readyTimeMillis;
+        return startTimeMillis;
     }
 
     @Override
@@ -60,19 +59,19 @@ public class Mechanic extends VisitOrMechanic {
         return id;
     }
 
-    public MachineComponent getCurrentMachineComponent() {
-        return currentMachineComponent;
+    public MachineComponent getStartMachineComponent() {
+        return startMachineComponent;
     }
 
-    public void setCurrentMachineComponent(MachineComponent currentMachineComponent) {
-        this.currentMachineComponent = currentMachineComponent;
+    public void setStartMachineComponent(MachineComponent startMachineComponent) {
+        this.startMachineComponent = startMachineComponent;
     }
 
-    public Long getReadyTimeMillis() {
-        return readyTimeMillis;
+    public Long getStartTimeMillis() {
+        return startTimeMillis;
     }
 
-    public void setReadyTimeMillis(Long readyTimeMillis) {
-        this.readyTimeMillis = readyTimeMillis;
+    public void setStartTimeMillis(Long startTimeMillis) {
+        this.startTimeMillis = startTimeMillis;
     }
 }
