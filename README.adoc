@@ -1,0 +1,5 @@
+= How to run
+
+Just run `com.redhat.summit2019.optaplanner.app.TravelingMechanicApp`.
+
+This uses https://www.optaplanner.org/[OptaPlanner].
