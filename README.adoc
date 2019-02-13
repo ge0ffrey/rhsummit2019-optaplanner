@@ -1,10 +1,10 @@
-== Demo POC
+= Demo POC
 
-= How to run
+== How to run
 
 Just run `com.redhat.summit2019.optaplanner.app.TravelingMechanicApp`.
 
-= Notes
+== Notes
 
 * Input/output is currently in XStream XML, but it needs to switch to a less verbose format (JSON, txt, binary, ...).
 * The UI is currently in Swing and ugly, but it needs to be replaced by a pretty web UI in the dashboard.
