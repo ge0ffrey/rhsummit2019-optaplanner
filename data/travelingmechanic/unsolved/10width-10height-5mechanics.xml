@@ -1,0 +1,1033 @@
+<com.redhat.summit2019.optaplanner.domain.TravelingMechanicSolution id="1">
+  <machineComponentList id="2">
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="3">
+      <id>0</id>
+      <locationX>0.0</locationX>
+      <locationY>0.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="4">
+      <id>1</id>
+      <locationX>0.0</locationX>
+      <locationY>1.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="5">
+      <id>2</id>
+      <locationX>0.0</locationX>
+      <locationY>2.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="6">
+      <id>3</id>
+      <locationX>0.0</locationX>
+      <locationY>3.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="7">
+      <id>4</id>
+      <locationX>0.0</locationX>
+      <locationY>4.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="8">
+      <id>5</id>
+      <locationX>0.0</locationX>
+      <locationY>5.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="9">
+      <id>6</id>
+      <locationX>0.0</locationX>
+      <locationY>6.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="10">
+      <id>7</id>
+      <locationX>0.0</locationX>
+      <locationY>7.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="11">
+      <id>8</id>
+      <locationX>0.0</locationX>
+      <locationY>8.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="12">
+      <id>9</id>
+      <locationX>0.0</locationX>
+      <locationY>9.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="13">
+      <id>10</id>
+      <locationX>1.0</locationX>
+      <locationY>0.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="14">
+      <id>11</id>
+      <locationX>1.0</locationX>
+      <locationY>1.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="15">
+      <id>12</id>
+      <locationX>1.0</locationX>
+      <locationY>2.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="16">
+      <id>13</id>
+      <locationX>1.0</locationX>
+      <locationY>3.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="17">
+      <id>14</id>
+      <locationX>1.0</locationX>
+      <locationY>4.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="18">
+      <id>15</id>
+      <locationX>1.0</locationX>
+      <locationY>5.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="19">
+      <id>16</id>
+      <locationX>1.0</locationX>
+      <locationY>6.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="20">
+      <id>17</id>
+      <locationX>1.0</locationX>
+      <locationY>7.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="21">
+      <id>18</id>
+      <locationX>1.0</locationX>
+      <locationY>8.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="22">
+      <id>19</id>
+      <locationX>1.0</locationX>
+      <locationY>9.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="23">
+      <id>20</id>
+      <locationX>2.0</locationX>
+      <locationY>0.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="24">
+      <id>21</id>
+      <locationX>2.0</locationX>
+      <locationY>1.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="25">
+      <id>22</id>
+      <locationX>2.0</locationX>
+      <locationY>2.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="26">
+      <id>23</id>
+      <locationX>2.0</locationX>
+      <locationY>3.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="27">
+      <id>24</id>
+      <locationX>2.0</locationX>
+      <locationY>4.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="28">
+      <id>25</id>
+      <locationX>2.0</locationX>
+      <locationY>5.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="29">
+      <id>26</id>
+      <locationX>2.0</locationX>
+      <locationY>6.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="30">
+      <id>27</id>
+      <locationX>2.0</locationX>
+      <locationY>7.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="31">
+      <id>28</id>
+      <locationX>2.0</locationX>
+      <locationY>8.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="32">
+      <id>29</id>
+      <locationX>2.0</locationX>
+      <locationY>9.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="33">
+      <id>30</id>
+      <locationX>3.0</locationX>
+      <locationY>0.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="34">
+      <id>31</id>
+      <locationX>3.0</locationX>
+      <locationY>1.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="35">
+      <id>32</id>
+      <locationX>3.0</locationX>
+      <locationY>2.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="36">
+      <id>33</id>
+      <locationX>3.0</locationX>
+      <locationY>3.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="37">
+      <id>34</id>
+      <locationX>3.0</locationX>
+      <locationY>4.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="38">
+      <id>35</id>
+      <locationX>3.0</locationX>
+      <locationY>5.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="39">
+      <id>36</id>
+      <locationX>3.0</locationX>
+      <locationY>6.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="40">
+      <id>37</id>
+      <locationX>3.0</locationX>
+      <locationY>7.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="41">
+      <id>38</id>
+      <locationX>3.0</locationX>
+      <locationY>8.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="42">
+      <id>39</id>
+      <locationX>3.0</locationX>
+      <locationY>9.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="43">
+      <id>40</id>
+      <locationX>4.0</locationX>
+      <locationY>0.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="44">
+      <id>41</id>
+      <locationX>4.0</locationX>
+      <locationY>1.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="45">
+      <id>42</id>
+      <locationX>4.0</locationX>
+      <locationY>2.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="46">
+      <id>43</id>
+      <locationX>4.0</locationX>
+      <locationY>3.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="47">
+      <id>44</id>
+      <locationX>4.0</locationX>
+      <locationY>4.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="48">
+      <id>45</id>
+      <locationX>4.0</locationX>
+      <locationY>5.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="49">
+      <id>46</id>
+      <locationX>4.0</locationX>
+      <locationY>6.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="50">
+      <id>47</id>
+      <locationX>4.0</locationX>
+      <locationY>7.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="51">
+      <id>48</id>
+      <locationX>4.0</locationX>
+      <locationY>8.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="52">
+      <id>49</id>
+      <locationX>4.0</locationX>
+      <locationY>9.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="53">
+      <id>50</id>
+      <locationX>5.0</locationX>
+      <locationY>0.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="54">
+      <id>51</id>
+      <locationX>5.0</locationX>
+      <locationY>1.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="55">
+      <id>52</id>
+      <locationX>5.0</locationX>
+      <locationY>2.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="56">
+      <id>53</id>
+      <locationX>5.0</locationX>
+      <locationY>3.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="57">
+      <id>54</id>
+      <locationX>5.0</locationX>
+      <locationY>4.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="58">
+      <id>55</id>
+      <locationX>5.0</locationX>
+      <locationY>5.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="59">
+      <id>56</id>
+      <locationX>5.0</locationX>
+      <locationY>6.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="60">
+      <id>57</id>
+      <locationX>5.0</locationX>
+      <locationY>7.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="61">
+      <id>58</id>
+      <locationX>5.0</locationX>
+      <locationY>8.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="62">
+      <id>59</id>
+      <locationX>5.0</locationX>
+      <locationY>9.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="63">
+      <id>60</id>
+      <locationX>6.0</locationX>
+      <locationY>0.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="64">
+      <id>61</id>
+      <locationX>6.0</locationX>
+      <locationY>1.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="65">
+      <id>62</id>
+      <locationX>6.0</locationX>
+      <locationY>2.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="66">
+      <id>63</id>
+      <locationX>6.0</locationX>
+      <locationY>3.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="67">
+      <id>64</id>
+      <locationX>6.0</locationX>
+      <locationY>4.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="68">
+      <id>65</id>
+      <locationX>6.0</locationX>
+      <locationY>5.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="69">
+      <id>66</id>
+      <locationX>6.0</locationX>
+      <locationY>6.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="70">
+      <id>67</id>
+      <locationX>6.0</locationX>
+      <locationY>7.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="71">
+      <id>68</id>
+      <locationX>6.0</locationX>
+      <locationY>8.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="72">
+      <id>69</id>
+      <locationX>6.0</locationX>
+      <locationY>9.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="73">
+      <id>70</id>
+      <locationX>7.0</locationX>
+      <locationY>0.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="74">
+      <id>71</id>
+      <locationX>7.0</locationX>
+      <locationY>1.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="75">
+      <id>72</id>
+      <locationX>7.0</locationX>
+      <locationY>2.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="76">
+      <id>73</id>
+      <locationX>7.0</locationX>
+      <locationY>3.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="77">
+      <id>74</id>
+      <locationX>7.0</locationX>
+      <locationY>4.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="78">
+      <id>75</id>
+      <locationX>7.0</locationX>
+      <locationY>5.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="79">
+      <id>76</id>
+      <locationX>7.0</locationX>
+      <locationY>6.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="80">
+      <id>77</id>
+      <locationX>7.0</locationX>
+      <locationY>7.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="81">
+      <id>78</id>
+      <locationX>7.0</locationX>
+      <locationY>8.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="82">
+      <id>79</id>
+      <locationX>7.0</locationX>
+      <locationY>9.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="83">
+      <id>80</id>
+      <locationX>8.0</locationX>
+      <locationY>0.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="84">
+      <id>81</id>
+      <locationX>8.0</locationX>
+      <locationY>1.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="85">
+      <id>82</id>
+      <locationX>8.0</locationX>
+      <locationY>2.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="86">
+      <id>83</id>
+      <locationX>8.0</locationX>
+      <locationY>3.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="87">
+      <id>84</id>
+      <locationX>8.0</locationX>
+      <locationY>4.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="88">
+      <id>85</id>
+      <locationX>8.0</locationX>
+      <locationY>5.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="89">
+      <id>86</id>
+      <locationX>8.0</locationX>
+      <locationY>6.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="90">
+      <id>87</id>
+      <locationX>8.0</locationX>
+      <locationY>7.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="91">
+      <id>88</id>
+      <locationX>8.0</locationX>
+      <locationY>8.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="92">
+      <id>89</id>
+      <locationX>8.0</locationX>
+      <locationY>9.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="93">
+      <id>90</id>
+      <locationX>9.0</locationX>
+      <locationY>0.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="94">
+      <id>91</id>
+      <locationX>9.0</locationX>
+      <locationY>1.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="95">
+      <id>92</id>
+      <locationX>9.0</locationX>
+      <locationY>2.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="96">
+      <id>93</id>
+      <locationX>9.0</locationX>
+      <locationY>3.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="97">
+      <id>94</id>
+      <locationX>9.0</locationX>
+      <locationY>4.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="98">
+      <id>95</id>
+      <locationX>9.0</locationX>
+      <locationY>5.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="99">
+      <id>96</id>
+      <locationX>9.0</locationX>
+      <locationY>6.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="100">
+      <id>97</id>
+      <locationX>9.0</locationX>
+      <locationY>7.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="101">
+      <id>98</id>
+      <locationX>9.0</locationX>
+      <locationY>8.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+    <com.redhat.summit2019.optaplanner.domain.MachineComponent id="102">
+      <id>99</id>
+      <locationX>9.0</locationX>
+      <locationY>9.0</locationY>
+      <attrition>0.0</attrition>
+    </com.redhat.summit2019.optaplanner.domain.MachineComponent>
+  </machineComponentList>
+  <mechanicList id="103">
+    <com.redhat.summit2019.optaplanner.domain.Mechanic id="104">
+      <id>0</id>
+      <startMachineComponent reference="3"/>
+      <startTimeMillis>0</startTimeMillis>
+    </com.redhat.summit2019.optaplanner.domain.Mechanic>
+    <com.redhat.summit2019.optaplanner.domain.Mechanic id="105">
+      <id>1</id>
+      <startMachineComponent reference="23"/>
+      <startTimeMillis>0</startTimeMillis>
+    </com.redhat.summit2019.optaplanner.domain.Mechanic>
+    <com.redhat.summit2019.optaplanner.domain.Mechanic id="106">
+      <id>2</id>
+      <startMachineComponent reference="43"/>
+      <startTimeMillis>0</startTimeMillis>
+    </com.redhat.summit2019.optaplanner.domain.Mechanic>
+    <com.redhat.summit2019.optaplanner.domain.Mechanic id="107">
+      <id>3</id>
+      <startMachineComponent reference="63"/>
+      <startTimeMillis>0</startTimeMillis>
+    </com.redhat.summit2019.optaplanner.domain.Mechanic>
+    <com.redhat.summit2019.optaplanner.domain.Mechanic id="108">
+      <id>4</id>
+      <startMachineComponent reference="83"/>
+      <startTimeMillis>0</startTimeMillis>
+    </com.redhat.summit2019.optaplanner.domain.Mechanic>
+  </mechanicList>
+  <visitList id="109">
+    <com.redhat.summit2019.optaplanner.domain.Visit id="110">
+      <id>0</id>
+      <machineComponent reference="3"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="111">
+      <id>1</id>
+      <machineComponent reference="4"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="112">
+      <id>2</id>
+      <machineComponent reference="5"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="113">
+      <id>3</id>
+      <machineComponent reference="6"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="114">
+      <id>4</id>
+      <machineComponent reference="7"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="115">
+      <id>5</id>
+      <machineComponent reference="8"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="116">
+      <id>6</id>
+      <machineComponent reference="9"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="117">
+      <id>7</id>
+      <machineComponent reference="10"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="118">
+      <id>8</id>
+      <machineComponent reference="11"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="119">
+      <id>9</id>
+      <machineComponent reference="12"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="120">
+      <id>10</id>
+      <machineComponent reference="13"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="121">
+      <id>11</id>
+      <machineComponent reference="14"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="122">
+      <id>12</id>
+      <machineComponent reference="15"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="123">
+      <id>13</id>
+      <machineComponent reference="16"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="124">
+      <id>14</id>
+      <machineComponent reference="17"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="125">
+      <id>15</id>
+      <machineComponent reference="18"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="126">
+      <id>16</id>
+      <machineComponent reference="19"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="127">
+      <id>17</id>
+      <machineComponent reference="20"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="128">
+      <id>18</id>
+      <machineComponent reference="21"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="129">
+      <id>19</id>
+      <machineComponent reference="22"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="130">
+      <id>20</id>
+      <machineComponent reference="23"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="131">
+      <id>21</id>
+      <machineComponent reference="24"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="132">
+      <id>22</id>
+      <machineComponent reference="25"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="133">
+      <id>23</id>
+      <machineComponent reference="26"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="134">
+      <id>24</id>
+      <machineComponent reference="27"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="135">
+      <id>25</id>
+      <machineComponent reference="28"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="136">
+      <id>26</id>
+      <machineComponent reference="29"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="137">
+      <id>27</id>
+      <machineComponent reference="30"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="138">
+      <id>28</id>
+      <machineComponent reference="31"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="139">
+      <id>29</id>
+      <machineComponent reference="32"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="140">
+      <id>30</id>
+      <machineComponent reference="33"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="141">
+      <id>31</id>
+      <machineComponent reference="34"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="142">
+      <id>32</id>
+      <machineComponent reference="35"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="143">
+      <id>33</id>
+      <machineComponent reference="36"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="144">
+      <id>34</id>
+      <machineComponent reference="37"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="145">
+      <id>35</id>
+      <machineComponent reference="38"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="146">
+      <id>36</id>
+      <machineComponent reference="39"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="147">
+      <id>37</id>
+      <machineComponent reference="40"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="148">
+      <id>38</id>
+      <machineComponent reference="41"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="149">
+      <id>39</id>
+      <machineComponent reference="42"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="150">
+      <id>40</id>
+      <machineComponent reference="43"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="151">
+      <id>41</id>
+      <machineComponent reference="44"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="152">
+      <id>42</id>
+      <machineComponent reference="45"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="153">
+      <id>43</id>
+      <machineComponent reference="46"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="154">
+      <id>44</id>
+      <machineComponent reference="47"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="155">
+      <id>45</id>
+      <machineComponent reference="48"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="156">
+      <id>46</id>
+      <machineComponent reference="49"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="157">
+      <id>47</id>
+      <machineComponent reference="50"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="158">
+      <id>48</id>
+      <machineComponent reference="51"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="159">
+      <id>49</id>
+      <machineComponent reference="52"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="160">
+      <id>50</id>
+      <machineComponent reference="53"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="161">
+      <id>51</id>
+      <machineComponent reference="54"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="162">
+      <id>52</id>
+      <machineComponent reference="55"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="163">
+      <id>53</id>
+      <machineComponent reference="56"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="164">
+      <id>54</id>
+      <machineComponent reference="57"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="165">
+      <id>55</id>
+      <machineComponent reference="58"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="166">
+      <id>56</id>
+      <machineComponent reference="59"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="167">
+      <id>57</id>
+      <machineComponent reference="60"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="168">
+      <id>58</id>
+      <machineComponent reference="61"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="169">
+      <id>59</id>
+      <machineComponent reference="62"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="170">
+      <id>60</id>
+      <machineComponent reference="63"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="171">
+      <id>61</id>
+      <machineComponent reference="64"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="172">
+      <id>62</id>
+      <machineComponent reference="65"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="173">
+      <id>63</id>
+      <machineComponent reference="66"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="174">
+      <id>64</id>
+      <machineComponent reference="67"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="175">
+      <id>65</id>
+      <machineComponent reference="68"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="176">
+      <id>66</id>
+      <machineComponent reference="69"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="177">
+      <id>67</id>
+      <machineComponent reference="70"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="178">
+      <id>68</id>
+      <machineComponent reference="71"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="179">
+      <id>69</id>
+      <machineComponent reference="72"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="180">
+      <id>70</id>
+      <machineComponent reference="73"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="181">
+      <id>71</id>
+      <machineComponent reference="74"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="182">
+      <id>72</id>
+      <machineComponent reference="75"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="183">
+      <id>73</id>
+      <machineComponent reference="76"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="184">
+      <id>74</id>
+      <machineComponent reference="77"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="185">
+      <id>75</id>
+      <machineComponent reference="78"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="186">
+      <id>76</id>
+      <machineComponent reference="79"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="187">
+      <id>77</id>
+      <machineComponent reference="80"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="188">
+      <id>78</id>
+      <machineComponent reference="81"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="189">
+      <id>79</id>
+      <machineComponent reference="82"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="190">
+      <id>80</id>
+      <machineComponent reference="83"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="191">
+      <id>81</id>
+      <machineComponent reference="84"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="192">
+      <id>82</id>
+      <machineComponent reference="85"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="193">
+      <id>83</id>
+      <machineComponent reference="86"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="194">
+      <id>84</id>
+      <machineComponent reference="87"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="195">
+      <id>85</id>
+      <machineComponent reference="88"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="196">
+      <id>86</id>
+      <machineComponent reference="89"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="197">
+      <id>87</id>
+      <machineComponent reference="90"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="198">
+      <id>88</id>
+      <machineComponent reference="91"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="199">
+      <id>89</id>
+      <machineComponent reference="92"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="200">
+      <id>90</id>
+      <machineComponent reference="93"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="201">
+      <id>91</id>
+      <machineComponent reference="94"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="202">
+      <id>92</id>
+      <machineComponent reference="95"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="203">
+      <id>93</id>
+      <machineComponent reference="96"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="204">
+      <id>94</id>
+      <machineComponent reference="97"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="205">
+      <id>95</id>
+      <machineComponent reference="98"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="206">
+      <id>96</id>
+      <machineComponent reference="99"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="207">
+      <id>97</id>
+      <machineComponent reference="100"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="208">
+      <id>98</id>
+      <machineComponent reference="101"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+    <com.redhat.summit2019.optaplanner.domain.Visit id="209">
+      <id>99</id>
+      <machineComponent reference="102"/>
+    </com.redhat.summit2019.optaplanner.domain.Visit>
+  </visitList>
+</com.redhat.summit2019.optaplanner.domain.TravelingMechanicSolution>
