@@ -30004,51 +30004,81 @@
   <mechanicList id="5003">
     <com.redhat.summit2019.optaplanner.domain.Mechanic id="5004">
       <id>0</id>
+      <locationX>0.0</locationX>
+      <locationY>0.0</locationY>
+      <speedInXYPerMillis>0.1</speedInXYPerMillis>
       <startMachineComponent reference="3"/>
       <startTimeMillis>0</startTimeMillis>
     </com.redhat.summit2019.optaplanner.domain.Mechanic>
     <com.redhat.summit2019.optaplanner.domain.Mechanic id="5005">
       <id>1</id>
+      <locationX>10.0</locationX>
+      <locationY>0.0</locationY>
+      <speedInXYPerMillis>0.1</speedInXYPerMillis>
       <startMachineComponent reference="503"/>
       <startTimeMillis>0</startTimeMillis>
     </com.redhat.summit2019.optaplanner.domain.Mechanic>
     <com.redhat.summit2019.optaplanner.domain.Mechanic id="5006">
       <id>2</id>
+      <locationX>20.0</locationX>
+      <locationY>0.0</locationY>
+      <speedInXYPerMillis>0.1</speedInXYPerMillis>
       <startMachineComponent reference="1003"/>
       <startTimeMillis>0</startTimeMillis>
     </com.redhat.summit2019.optaplanner.domain.Mechanic>
     <com.redhat.summit2019.optaplanner.domain.Mechanic id="5007">
       <id>3</id>
+      <locationX>30.0</locationX>
+      <locationY>0.0</locationY>
+      <speedInXYPerMillis>0.1</speedInXYPerMillis>
       <startMachineComponent reference="1503"/>
       <startTimeMillis>0</startTimeMillis>
     </com.redhat.summit2019.optaplanner.domain.Mechanic>
     <com.redhat.summit2019.optaplanner.domain.Mechanic id="5008">
       <id>4</id>
+      <locationX>40.0</locationX>
+      <locationY>0.0</locationY>
+      <speedInXYPerMillis>0.1</speedInXYPerMillis>
       <startMachineComponent reference="2003"/>
       <startTimeMillis>0</startTimeMillis>
     </com.redhat.summit2019.optaplanner.domain.Mechanic>
     <com.redhat.summit2019.optaplanner.domain.Mechanic id="5009">
       <id>5</id>
+      <locationX>50.0</locationX>
+      <locationY>0.0</locationY>
+      <speedInXYPerMillis>0.1</speedInXYPerMillis>
       <startMachineComponent reference="2503"/>
       <startTimeMillis>0</startTimeMillis>
     </com.redhat.summit2019.optaplanner.domain.Mechanic>
     <com.redhat.summit2019.optaplanner.domain.Mechanic id="5010">
       <id>6</id>
+      <locationX>60.0</locationX>
+      <locationY>0.0</locationY>
+      <speedInXYPerMillis>0.1</speedInXYPerMillis>
       <startMachineComponent reference="3003"/>
       <startTimeMillis>0</startTimeMillis>
     </com.redhat.summit2019.optaplanner.domain.Mechanic>
     <com.redhat.summit2019.optaplanner.domain.Mechanic id="5011">
       <id>7</id>
+      <locationX>70.0</locationX>
+      <locationY>0.0</locationY>
+      <speedInXYPerMillis>0.1</speedInXYPerMillis>
       <startMachineComponent reference="3503"/>
       <startTimeMillis>0</startTimeMillis>
     </com.redhat.summit2019.optaplanner.domain.Mechanic>
     <com.redhat.summit2019.optaplanner.domain.Mechanic id="5012">
       <id>8</id>
+      <locationX>80.0</locationX>
+      <locationY>0.0</locationY>
+      <speedInXYPerMillis>0.1</speedInXYPerMillis>
       <startMachineComponent reference="4003"/>
       <startTimeMillis>0</startTimeMillis>
     </com.redhat.summit2019.optaplanner.domain.Mechanic>
     <com.redhat.summit2019.optaplanner.domain.Mechanic id="5013">
       <id>9</id>
+      <locationX>90.0</locationX>
+      <locationY>0.0</locationY>
+      <speedInXYPerMillis>0.1</speedInXYPerMillis>
       <startMachineComponent reference="4503"/>
       <startTimeMillis>0</startTimeMillis>
     </com.redhat.summit2019.optaplanner.domain.Mechanic>

@@ -604,6 +604,9 @@
   <mechanicList id="103">
     <com.redhat.summit2019.optaplanner.domain.Mechanic id="104">
       <id>0</id>
+      <locationX>0.0</locationX>
+      <locationY>0.0</locationY>
+      <speedInXYPerMillis>0.1</speedInXYPerMillis>
       <startMachineComponent reference="3"/>
       <startTimeMillis>0</startTimeMillis>
     </com.redhat.summit2019.optaplanner.domain.Mechanic>

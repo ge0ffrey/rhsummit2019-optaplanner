@@ -19,6 +19,7 @@ package com.redhat.summit2019.optaplanner.domain;
 import com.redhat.summit2019.optaplanner.domain.solver.DepartureTimeUpdatingVariableListener;
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.lookup.PlanningId;
+import org.optaplanner.core.api.domain.variable.AnchorShadowVariable;
 import org.optaplanner.core.api.domain.variable.CustomShadowVariable;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
 import org.optaplanner.core.api.domain.variable.PlanningVariableGraphType;
@@ -37,8 +38,11 @@ public class Visit extends VisitOrMechanic {
             graphType = PlanningVariableGraphType.CHAINED)
     private VisitOrMechanic previous;
 
+    @AnchorShadowVariable(sourceVariableName = "previous")
+    private Mechanic mechanic;
     @CustomShadowVariable(variableListenerClass = DepartureTimeUpdatingVariableListener.class,
-            sources = {@PlanningVariableReference(variableName = "previous")})
+            sources = {@PlanningVariableReference(variableName = "previous"),
+                    @PlanningVariableReference(variableName = "mechanic")})
     private Long departureTimeMillis = null; // Always after Mechanic.readyTimeMillis
 
     private Visit() {
@@ -53,7 +57,7 @@ public class Visit extends VisitOrMechanic {
         if (previous == null) {
             return null;
         }
-        return previous.getMachineComponent().getTravelTimeMillisTo(machineComponent);
+        return previous.getMachineComponent().getTravelTimeMillisTo(machineComponent, mechanic.getSpeedInXYPerMillis());
     }
 
     public long getAttritionMicros() {
@@ -84,6 +88,14 @@ public class Visit extends VisitOrMechanic {
 
     public void setPrevious(VisitOrMechanic previous) {
         this.previous = previous;
+    }
+
+    public Mechanic getMechanic() {
+        return mechanic;
+    }
+
+    public void setMechanic(Mechanic mechanic) {
+        this.mechanic = mechanic;
     }
 
     @Override

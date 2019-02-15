@@ -23,6 +23,10 @@ public class Mechanic extends VisitOrMechanic {
     @PlanningId
     private Long id;
 
+    private double locationX;
+    private double locationY;
+    private double speedInXYPerMillis = 0.1;
+
     // The machine component that the mechanic is currently working on, on-route to or has just finished working on
     private MachineComponent startMachineComponent;
     // When the Mechanic will finish with working on startMachineComponent
@@ -31,8 +35,10 @@ public class Mechanic extends VisitOrMechanic {
     private Mechanic() {
     }
 
-    public Mechanic(Long id, MachineComponent startMachineComponent) {
+    public Mechanic(Long id, double locationX, double locationY, MachineComponent startMachineComponent) {
         this.id = id;
+        this.locationX = locationX;
+        this.locationY = locationY;
         this.startMachineComponent = startMachineComponent;
     }
 
@@ -46,6 +52,11 @@ public class Mechanic extends VisitOrMechanic {
         return startTimeMillis;
     }
 
+    public boolean isWorkInProgress() {
+        return locationX == startMachineComponent.getLocationX()
+                && locationY == startMachineComponent.getLocationY();
+    }
+
     @Override
     public String toString() {
         return "Mechanic-" + id;
@@ -57,6 +68,30 @@ public class Mechanic extends VisitOrMechanic {
 
     public Long getId() {
         return id;
+    }
+
+    public double getLocationX() {
+        return locationX;
+    }
+
+    public void setLocationX(double locationX) {
+        this.locationX = locationX;
+    }
+
+    public double getLocationY() {
+        return locationY;
+    }
+
+    public void setLocationY(double locationY) {
+        this.locationY = locationY;
+    }
+
+    public double getSpeedInXYPerMillis() {
+        return speedInXYPerMillis;
+    }
+
+    public void setSpeedInXYPerMillis(double speedInXYPerMillis) {
+        this.speedInXYPerMillis = speedInXYPerMillis;
     }
 
     public MachineComponent getStartMachineComponent() {

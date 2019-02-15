@@ -75,7 +75,8 @@ public class TravelingMechanicGenerator extends LoggingMain {
         long mechanicId = 0L;
         for (int i = 0; i < mechanicSize; i++) {
             MachineComponent startMachineComponent = machineComponentList.get(i * machineComponentSize / mechanicSize);
-            Mechanic mechanic = new Mechanic(mechanicId, startMachineComponent);
+            Mechanic mechanic = new Mechanic(mechanicId,
+                    startMachineComponent.getLocationX(), startMachineComponent.getLocationY(), startMachineComponent);
             mechanicId++;
             mechanicList.add(mechanic);
         }

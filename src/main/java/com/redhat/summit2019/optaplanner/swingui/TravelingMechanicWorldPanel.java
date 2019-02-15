@@ -118,7 +118,7 @@ public class TravelingMechanicWorldPanel extends JPanel {
             if (visit.getPrevious() != null) {
                 MachineComponent previousMachineComponent = visit.getPrevious().getMachineComponent();
                 MachineComponent machineComponent = visit.getMachineComponent();
-                double attrition = visit.getMachineComponent().getAttrition();
+                double attrition = machineComponent.getAttrition();
                 g.setColor(TangoColorFactory.buildPercentageColor(chocolate0, TangoColorFactory.CHOCOLATE_3, attrition));
                 g.setStroke(attrition < 0.25 ? FAT_DASHED_STROKE : attrition < 0.50 ? NORMAL_STROKE : attrition < 0.75 ? FAT_STROKE : VERY_FAT_STROKE);
                 translator.drawRoute(g, previousMachineComponent.getLocationX(), previousMachineComponent.getLocationY(),
@@ -128,11 +128,19 @@ public class TravelingMechanicWorldPanel extends JPanel {
                 g.drawString(visit.getDepartureTimeMillis() + "ms", x + 2, y + 5 + DEPARTURE_TEXT_SIZE);
             }
         }
+        for (Mechanic mechanic : solution.getMechanicList()) {
+            MachineComponent machineComponent = mechanic.getStartMachineComponent();
+            double attrition = machineComponent.getAttrition();
+            g.setColor(TangoColorFactory.buildPercentageColor(chocolate0, TangoColorFactory.CHOCOLATE_3, attrition));
+            g.setStroke(attrition < 0.25 ? FAT_DASHED_STROKE : attrition < 0.50 ? NORMAL_STROKE : attrition < 0.75 ? FAT_STROKE : VERY_FAT_STROKE);
+            translator.drawRoute(g, mechanic.getLocationX(), mechanic.getLocationY(),
+                    machineComponent.getLocationX(), machineComponent.getLocationY(), true, false);
+        }
+        g.setStroke(FAT_STROKE);
         g.setColor(TangoColorFactory.SKY_BLUE_1);
         for (Mechanic mechanic : solution.getMechanicList()) {
-            MachineComponent machineComponent = mechanic.getMachineComponent();
-            int x = translator.translateLongitudeToX(machineComponent.getLocationX());
-            int y = translator.translateLatitudeToY(machineComponent.getLocationY());
+            int x = translator.translateLongitudeToX(mechanic.getLocationX());
+            int y = translator.translateLatitudeToY(mechanic.getLocationY());
             g.drawLine(x - 5, y - 4, x - 5, y + 4);
             g.drawLine(x - 7, y, x - 3, y);
             g.drawLine(x - 7, y + 6, x - 5, y + 4);
