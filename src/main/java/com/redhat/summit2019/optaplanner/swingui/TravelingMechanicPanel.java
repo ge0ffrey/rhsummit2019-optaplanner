@@ -63,16 +63,16 @@ public class TravelingMechanicPanel extends SolutionPanel<TravelingMechanicSolut
         setLayout(new BorderLayout());
         JPanel buttonPanel = new JPanel(new FlowLayout());
         buttonPanel.add(new JLabel("Player size:"));
-        playerSizeField = new JSpinner(new SpinnerNumberModel(20, 0, 5000, 10));
+        playerSizeField = new JSpinner(new SpinnerNumberModel(25, 0, 5000, 10));
         buttonPanel.add(playerSizeField);
         buttonPanel.add(new JLabel("Avg attrition per ms per player:"));
-        attritionPerMilliSecondField = new JSpinner(new SpinnerNumberModel(0.0, 0.0, 1.0, 0.000_05));
+        attritionPerMilliSecondField = new JSpinner(new SpinnerNumberModel(0.0001, 0.0, 1.0, 0.000_05));
         ((JSpinner.NumberEditor) attritionPerMilliSecondField.getEditor()).getFormat().setMinimumFractionDigits(6); // Hack
         attritionPerMilliSecondField.setPreferredSize(
                 new Dimension(100, attritionPerMilliSecondField.getPreferredSize().height)); // Hack
         buttonPanel.add(attritionPerMilliSecondField);
         buttonPanel.add(new JLabel("Mechanic speed per ms:"));
-        mechanicSpeedPerMillisField = new JSpinner(new SpinnerNumberModel(0.1, 0.0, 10.0, 0.01));
+        mechanicSpeedPerMillisField = new JSpinner(new SpinnerNumberModel(0.2, 0.0, 10.0, 0.1));
         buttonPanel.add(mechanicSpeedPerMillisField);
 
         timer = new Timer(REFRESH_RATE_MILLIS, e -> refreshSimulation());
@@ -152,12 +152,24 @@ public class TravelingMechanicPanel extends SolutionPanel<TravelingMechanicSolut
                         scoreDirector.beforeProblemPropertyChanged(machineComponent);
                         machineComponent.setAttrition(0.0);
                         scoreDirector.afterProblemPropertyChanged(machineComponent);
-                        Visit next = mechanic.getNext();
-                        if (next != null) {
+                        Visit firstVisit = mechanic.getNext();
+                        if (firstVisit != null) {
+                            Visit secondVisit = firstVisit.getNext();
+
                             scoreDirector.beforeProblemPropertyChanged(mechanic);
-                            mechanic.setStartMachineComponent(next.getMachineComponent());
-                            mechanic.setStartTimeMillis(timeMillis + next.getTravelTimeMillisFromPrevious() + Visit.SERVICE_TIME_MILLIS);
+                            mechanic.setStartMachineComponent(firstVisit.getMachineComponent());
+                            mechanic.setStartTimeMillis(timeMillis + firstVisit.getTravelTimeMillisFromPrevious() + Visit.SERVICE_TIME_MILLIS);
+                            mechanic.setNext(secondVisit);
                             scoreDirector.afterProblemPropertyChanged(mechanic);
+
+                            scoreDirector.beforeProblemPropertyChanged(firstVisit);
+                            firstVisit.setPrevious(null);
+                            firstVisit.setNext(null);
+                            scoreDirector.afterProblemPropertyChanged(firstVisit);
+
+                            scoreDirector.beforeProblemPropertyChanged(secondVisit);
+                            secondVisit.setPrevious(mechanic);
+                            scoreDirector.beforeProblemPropertyChanged(secondVisit);
                         }
                     }
                 } else {
@@ -174,8 +186,8 @@ public class TravelingMechanicPanel extends SolutionPanel<TravelingMechanicSolut
                     x += xDiff * ratio;
                     y += yDiff * ratio;
                     scoreDirector.beforeProblemPropertyChanged(mechanic);
-                    mechanic.setLocationX(x + (xDiff * ratio));
-                    mechanic.setLocationY(y + (yDiff * ratio));
+                    mechanic.setLocationX(x);
+                    mechanic.setLocationY(y);
                     scoreDirector.afterProblemPropertyChanged(mechanic);
                 }
             }
